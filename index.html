@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo de Livros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Acervo de Livros</h1>
+        
+        <div class="form-container">
+            <h2>Adicionar Livro</h2>
+            <form id="form-livro">
+                <input type="text" id="titulo" placeholder="Título" required>
+                <input type="text" id="autor" placeholder="Autor" required>
+                <input type="number" id="ano" placeholder="Ano de Publicação">
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+        
+        <div class="filtro-container">
+            <input 
+                type="text" 
+                id="busca" 
+                placeholder="🔍 Filtrar por Título" 
+                oninput="filtrarLivros()"
+            >              
+        </div>
+
+        <div class="livros-container">
+            <h2>Meus Livros</h2>
+            <div id="livros-list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
